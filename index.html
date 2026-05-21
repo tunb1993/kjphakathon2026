@@ -339,6 +339,45 @@
     .rule-card ul li:last-child { border-bottom: none; }
     .rule-card ul li::before { content: '✓'; color: var(--red); font-weight: 700; flex-shrink: 0; }
 
+    /* ── INFO TABLE (Quy định) ── */
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr:nth-child(even) td { background: var(--gray-100); }
+    .info-table td { padding: 13px 20px; font-size: 14px; border-bottom: 1px solid var(--gray-200); vertical-align: top; line-height: 1.6; }
+    .info-table td:first-child { font-weight: 600; color: var(--red-dark); width: 200px; white-space: nowrap; }
+    .info-table tr:last-child td { border-bottom: none; }
+    .rules-card {
+      margin-top: 32px; border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-200);
+    }
+    .rules-card-header {
+      background: var(--red); color: white;
+      padding: 14px 22px; font-size: 14px; font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    /* ── AGENDA NGÀY THI ── */
+    .agenda-section { background: var(--gray-100); }
+    .agenda-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; }
+    .agenda-table th {
+      background: var(--red); color: white;
+      padding: 12px 16px; text-align: left; font-size: 12px;
+      letter-spacing: .5px; text-transform: uppercase;
+    }
+    .agenda-table td { padding: 13px 16px; border-bottom: 1px solid var(--gray-200); vertical-align: top; background: white; }
+    .agenda-table tr.ag-highlight td { background: rgba(55,159,216,0.07); border-left: 3px solid var(--red); }
+    .agenda-table tr.ag-break td { background: var(--gray-100); }
+    .ag-time { font-weight: 700; color: var(--red); white-space: nowrap; min-width: 110px; }
+    .ag-content { font-weight: 600; color: var(--gray-900); }
+    .ag-detail { color: var(--gray-700); font-size: 13px; }
+    .ag-owner { color: var(--gray-400); font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .ag-note {
+      display: inline-block; font-size: 11px; font-weight: 600;
+      background: #EBF5FC; color: var(--red-dark);
+      padding: 2px 10px; border-radius: 20px; margin-top: 4px;
+    }
+
     /* ── FAQ ── */
     .faq-section { background: var(--gray-100); }
     .faq-list { max-width: 760px; }
@@ -508,6 +547,7 @@
     <a href="#timeline">Lịch trình</a>
     <a href="#prizes">Giải thưởng</a>
     <a href="#judges">Ban Giám Khảo</a>
+    <a href="#agenda">Agenda</a>
     <a href="#faq">FAQ</a>
   </div>
   <a href="#timeline" class="nav-cta">📅 27/06/2026</a>
@@ -837,6 +877,149 @@
   </div>
 </section>
 
+<!-- AGENDA NGÀY THI -->
+<section class="agenda-section" id="agenda">
+  <div class="section-inner">
+    <div class="section-tag">Ngày thi</div>
+    <h2 class="section-title">Agenda ngày thi — 27/06/2026</h2>
+    <p class="section-desc">Lịch trình chi tiết cho ngày thi chính thức · Thứ 7, 08:30 – 17:10</p>
+
+    <div style="overflow-x:auto; border-radius:14px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); border: 1px solid var(--gray-200); margin-top:8px; background:white;">
+      <table class="agenda-table">
+        <thead>
+          <tr>
+            <th>Thời gian</th>
+            <th>Nội dung</th>
+            <th>Mô tả chi tiết</th>
+            <th>Phụ trách</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ag-time">08:30 – 09:00</td>
+            <td class="ag-content">Đón tiếp &amp; Check-in</td>
+            <td class="ag-detail">Đón khách, BGK; kiểm tra setup kỹ thuật, âm thanh, màn hình chiếu</td>
+            <td class="ag-owner">BTC Logistics</td>
+          </tr>
+          <tr class="ag-highlight">
+            <td class="ag-time">09:00 – 09:30</td>
+            <td class="ag-content">🎙 Lễ Khai mạc</td>
+            <td class="ag-detail">Phát biểu khai mạc của BTC; giới thiệu BGK; phổ biến quy chế &amp; thứ tự thi</td>
+            <td class="ag-owner">Trưởng BTC + MC</td>
+          </tr>
+          <tr>
+            <td class="ag-time">09:30 – 10:10</td>
+            <td class="ag-content">Đội 1 — Thuyết trình</td>
+            <td class="ag-detail">20' trình bày + demo · 20' Q&amp;A từ BGK <span class="ag-note">Theo thứ tự bốc thăm</span></td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr>
+            <td class="ag-time">10:15 – 10:55</td>
+            <td class="ag-content">Đội 2 — Thuyết trình</td>
+            <td class="ag-detail">20' trình bày + demo · 20' Q&amp;A từ BGK</td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr>
+            <td class="ag-time">11:00 – 11:40</td>
+            <td class="ag-content">Đội 3 — Thuyết trình</td>
+            <td class="ag-detail">20' trình bày + demo · 20' Q&amp;A từ BGK</td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr class="ag-highlight">
+            <td class="ag-time">11:40 – 11:55</td>
+            <td class="ag-content">🙋 Khán giả hỏi — Đội 1, 2, 3</td>
+            <td class="ag-detail">15' dành cho khán giả đặt câu hỏi · Phục vụ bình chọn <span class="ag-note">Không ảnh hưởng điểm BGK</span></td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr class="ag-break">
+            <td class="ag-time">11:55 – 13:15</td>
+            <td class="ag-content">🍱 Nghỉ giải lao &amp; Nghỉ trưa</td>
+            <td class="ag-detail">Nghỉ chung buổi sáng — BTC chuẩn bị catering tại chỗ</td>
+            <td class="ag-owner">BTC Logistics</td>
+          </tr>
+          <tr>
+            <td class="ag-time">13:15 – 13:55</td>
+            <td class="ag-content">Đội 4 — Thuyết trình</td>
+            <td class="ag-detail">20' trình bày + demo · 20' Q&amp;A từ BGK</td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr>
+            <td class="ag-time">14:00 – 14:40</td>
+            <td class="ag-content">Đội 5 — Thuyết trình</td>
+            <td class="ag-detail">20' trình bày + demo · 20' Q&amp;A từ BGK</td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr>
+            <td class="ag-time">14:45 – 15:25</td>
+            <td class="ag-content">Đội 6 — Thuyết trình</td>
+            <td class="ag-detail">20' trình bày + demo · 20' Q&amp;A từ BGK</td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr class="ag-highlight">
+            <td class="ag-time">15:25 – 15:40</td>
+            <td class="ag-content">🙋 Khán giả hỏi — Đội 4, 5, 6</td>
+            <td class="ag-detail">15' dành cho khán giả đặt câu hỏi · Phục vụ bình chọn <span class="ag-note">Không ảnh hưởng điểm BGK</span></td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr class="ag-break">
+            <td class="ag-time">15:40 – 16:00</td>
+            <td class="ag-content">🗳 BGK hội ý &amp; Bình chọn</td>
+            <td class="ag-detail">BGK chấm điểm tổng kết; toàn bộ nhân viên bình chọn Giải Khán giả <span class="ag-note">Dùng form online</span></td>
+            <td class="ag-owner">BGK + BTC</td>
+          </tr>
+          <tr class="ag-highlight">
+            <td class="ag-time">16:00 – 16:40</td>
+            <td class="ag-content">🏆 Lễ Trao giải</td>
+            <td class="ag-detail">Công bố &amp; trao giải Nhất / Nhì / Ba / Sáng tạo nhất / Khán giả bình chọn</td>
+            <td class="ag-owner">CEO + Trưởng BTC + MC</td>
+          </tr>
+          <tr>
+            <td class="ag-time">16:40 – 17:10</td>
+            <td class="ag-content">📸 Bế mạc &amp; Chụp ảnh</td>
+            <td class="ag-detail">Phát biểu cảm ơn, chụp ảnh lưu niệm toàn bộ đội thi và BGK</td>
+            <td class="ag-owner">MC</td>
+          </tr>
+          <tr class="ag-break">
+            <td class="ag-time">18:00~</td>
+            <td class="ag-content">🍻 Team Building</td>
+            <td class="ag-detail">Cả team đi ăn uống sau ngày thi 🎉</td>
+            <td class="ag-owner">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Quy định trong ngày thi -->
+    <div class="rules-card">
+      <div class="rules-card-header">📋 Quy định trong ngày thi</div>
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <td>Check-in</td>
+            <td>Có mặt tại địa điểm trước <strong>08:30</strong></td>
+          </tr>
+          <tr>
+            <td>Nội dung bài thi</td>
+            <td>Không thay đổi sau <strong>21/06/2026</strong></td>
+          </tr>
+          <tr>
+            <td>Thiết bị</td>
+            <td>Mỗi đội tự chuẩn bị máy tính, thiết bị demo</td>
+          </tr>
+          <tr>
+            <td>Q&amp;A</td>
+            <td>BGK có quyền đặt câu hỏi kỹ thuật trong phần Q&amp;A</td>
+          </tr>
+          <tr>
+            <td>Kết quả</td>
+            <td>Quyết định của BGK là quyết định cuối cùng</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="section-inner">
@@ -844,30 +1027,67 @@
     <h2 class="section-title">Câu hỏi thường gặp</h2>
 
     <div class="faq-list">
+
       <div class="faq-item open">
-        <div class="faq-q">Tôi không phải AI chuyên gia, có tham gia được không? <span class="arrow">▼</span></div>
-        <div class="faq-a">Hoàn toàn có thể! Hackathon này dành cho tất cả nhân viên Kaopiz — bao gồm cả developer, BrSE, BA, QA, PM. Bạn không cần biết sâu về AI — điều quan trọng là ý tưởng giải quyết vấn đề thực tế và tinh thần hợp tác của đội. Sẽ có workshop pre-event để giúp bạn làm quen với các AI tools.</div>
+        <div class="faq-q">Phạm vi giải pháp có bắt buộc theo các giai đoạn quy trình phát triển phần mềm BTC đề xuất không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#fde8e8;color:#c0392b;">Không bắt buộc</span> Các giai đoạn BTC đưa ra chỉ mang tính tham khảo. Tuy nhiên, giải pháp <strong>cần nằm trong phạm vi quy trình phát triển phần mềm của đội sản xuất</strong> — các quy trình của Sale hay Back Office sẽ không hợp lệ.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q">Được phép dùng tool, framework, API AI nào? <span class="arrow">▼</span></div>
-        <div class="faq-a">Tự do sử dụng các AI tools và API phổ biến: ChatGPT/OpenAI API, Claude (Anthropic), Gemini, GitHub Copilot, Cursor, LangChain, v.v. Chi tiết danh sách cho phép sẽ được công bố trong Kick-off meeting.</div>
+        <div class="faq-q">20 phút thuyết trình đã bao gồm phần demo chưa? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#d4edda;color:#1a6e3a;">Có bao gồm</span> 20 phút thuyết trình bao gồm cả demo sản phẩm. Sau đó là <strong>20 phút Q&amp;A riêng</strong> từ Ban Giám Khảo.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q">Đội ở Nhật và đội ở Việt Nam có thể thi chung không? <span class="arrow">▼</span></div>
-        <div class="faq-a">Có và rất được khuyến khích! Đây là cơ hội tuyệt vời để BrSE tại Nhật phối hợp với đội sản xuất tại Việt Nam. Phần demo có thể thực hiện online qua video call nếu cần.</div>
+        <div class="faq-q">Giải thưởng bao giờ được công bố? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#fff3cd;color:#856404;">Sắp công bố</span> BTC sẽ công bố sau khi có quyết định chính thức. Thông tin sơ bộ: <strong>tổng giải thưởng lên đến 30 man</strong>.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q">Sản phẩm sau hackathon thuộc quyền sở hữu của ai? <span class="arrow">▼</span></div>
-        <div class="faq-a">Tất cả sản phẩm tạo ra trong hackathon thuộc quyền sở hữu của Kaopiz. Tuy nhiên, những người tạo ra sản phẩm sẽ được ghi nhận công khai và được ưu tiên tham gia vào quá trình phát triển tiếp theo nếu sản phẩm được chọn triển khai thực tế.</div>
+        <div class="faq-q">Có giới hạn số người lên thuyết trình không? <span class="arrow">▼</span></div>
+        <div class="faq-a">Chỉ các thành viên đã <strong>đăng ký chính thức trong team</strong> mới được tham gia thuyết trình. Trong số đó, <strong>không giới hạn</strong> bao nhiêu người lên trình bày.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q">Có mentor hỗ trợ trong ngày thi không? <span class="arrow">▼</span></div>
-        <div class="faq-a">Có! Ban tổ chức sẽ bố trí mentor kỹ thuật hỗ trợ các đội trong ngày thi. Ngoài ra sẽ có Q&A session giữa ngày để các đội có thể hỏi thêm định hướng.</div>
+        <div class="faq-q">Thuyết trình vượt 20 phút có bị trừ điểm không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#fde8e8;color:#c0392b;">Có trừ điểm</span> Vượt quá thời gian quy định sẽ bị trừ điểm. Các đội cần <strong>luyện tập và kiểm soát thời gian</strong> trước ngày thi.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q">Quy định trong ngày thi là gì? <span class="arrow">▼</span></div>
-        <div class="faq-a">Check-in trước 08:30. Nội dung bài thi không được thay đổi sau 21/06/2026. Mỗi đội tự chuẩn bị máy tính và thiết bị demo. BGK có quyền đặt câu hỏi kỹ thuật trong phần Q&A. Quyết định của BGK là quyết định cuối cùng.</div>
+        <div class="faq-q">Tiêu chí "Tính thực tiễn" có ưu tiên giải pháp áp dụng cho Kaopiz Japan, Kaopiz VN hay Kaopiz Đà Nẵng không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#fff3cd;color:#856404;">Sẽ làm rõ</span> BTC sẽ cân nhắc và <strong>gửi thông báo bổ sung</strong> để làm rõ tiêu chí này trước ngày thi.</div>
       </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Nếu giải pháp của đội trùng với đội khác đã nộp trước, có bị loại không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#fde8e8;color:#c0392b;">Không bị loại</span> Nếu giải pháp trùng với sản phẩm/tool <strong>đã có sẵn tại Kaopiz</strong>, điểm tiêu chí <em>Sáng tạo &amp; Đổi mới</em> sẽ thấp hơn. Trường hợp hai đội thi chọn cùng vấn đề và hướng giải pháp thì không sao — vì cách tiếp cận và triển khai của mỗi đội có thể khác nhau.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Output có cần nộp source code không? Có được dùng open source không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#d4edda;color:#1a6e3a;">Có, cần nộp</span> Deliverable nộp cho BTC bao gồm <strong>toàn bộ source code, tài liệu và slide</strong> — tương tự như khi giao hàng cho khách hàng.<br><br>Việc sử dụng <strong>open source được phép</strong>, miễn là đội có đóng góp trí tuệ và giá trị riêng vào sản phẩm.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Supporter có được vào phòng thi ngày thi không? Có được là người ngoài Kaopiz không? <span class="arrow">▼</span></div>
+        <div class="faq-a">Supporter <strong>chỉ giới hạn nhân viên nội bộ Kaopiz</strong>, và chỉ tham gia với tư cách <strong>khán giả cổ vũ</strong>. Việc thuyết trình và trả lời câu hỏi chỉ dành cho các thành viên đã đăng ký chính thức trong team.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Phần trả lời câu hỏi của BGK có ảnh hưởng đến điểm số không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#d4edda;color:#1a6e3a;">Có ảnh hưởng</span> Không chỉ điểm thuyết trình mà còn <strong>phản ánh vào kết quả tổng thể</strong>. Chất lượng trả lời thể hiện mức độ hiểu sâu về vấn đề và giải pháp — quyết định cuối cùng thuộc về Ban Giám Khảo.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Khán giả có được đặt câu hỏi cho các đội thi không? <span class="arrow">▼</span></div>
+        <div class="faq-a"><span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:6px;background:#d4edda;color:#1a6e3a;">Có</span> BTC sẽ bố trí một khung thời gian (giữa và cuối chương trình) để khán giả đặt câu hỏi — phục vụ phần bình chọn và mang lại góc nhìn đa chiều.<br><br><strong>Lưu ý:</strong> Trong 40 phút thi chính thức (20' thuyết trình + 20' Q&amp;A của BGK) <strong>không có phần hỏi từ khán giả</strong>, và câu hỏi khán giả không ảnh hưởng đến kết quả chấm của BGK.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Cơ chế bình chọn khán giả như thế nào? Các SBU ít người có bị thiệt thòi không? <span class="arrow">▼</span></div>
+        <div class="faq-a">Đây là <strong>giải phụ bổ sung</strong>, không ảnh hưởng đến kết quả chính. Cơ chế: <strong>mỗi khán giả chọn 3 đội yêu thích</strong>, đội nhận nhiều phiếu nhất sẽ giành giải bình chọn. Cơ chế này được thiết kế để hạn chế lợi thế của SBU đông người.</div>
+      </div>
+
     </div>
   </div>
 </section>
