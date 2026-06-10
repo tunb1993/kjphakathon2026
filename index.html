@@ -104,6 +104,12 @@
       margin-bottom: 50px;
     }
     .hero-date span { opacity: 0.8; font-weight: 400; margin-right: 6px; }
+    .hero-venue {
+      font-size: 15px; font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      margin-top: -36px; margin-bottom: 40px;
+      padding: 0 12px;
+    }
 
     /* countdown */
     .countdown {
@@ -359,6 +365,24 @@
 
     /* ── AGENDA NGÀY THI ── */
     .agenda-section { background: var(--gray-100); }
+    .agenda-venue {
+      display: flex; align-items: center; gap: 14px;
+      background: white; border-radius: 12px;
+      padding: 16px 22px; margin: 18px 0 22px;
+      box-shadow: 0 2px 16px rgba(55,159,216,0.10);
+      border-left: 5px solid var(--red);
+      max-width: 720px;
+    }
+    .agenda-venue-icon { font-size: 26px; line-height: 1; }
+    .agenda-venue-label {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--red); margin-bottom: 4px;
+    }
+    .agenda-venue-address {
+      font-size: 16px; font-weight: 600;
+      color: var(--gray-900); line-height: 1.4;
+    }
     .agenda-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; }
     .agenda-table th {
       background: var(--red); color: white;
@@ -544,6 +568,7 @@
   <h1>Kaopiz Japan<br/><span>Hackathon</span> 2026</h1>
   <p class="hero-subtitle">Cùng nhau xây dựng giải pháp AI thực chiến — từ proposal đến release, biến quy trình phát triển phần mềm thành lợi thế cạnh tranh.</p>
   <div class="hero-date"><span>📅 Ngày thi chính thức:</span>27 tháng 06 năm 2026</div>
+  <div class="hero-venue">📍 東京都新宿区西新宿6-21-1 アイタウン・プラザ 206</div>
 
   <!-- Countdown -->
   <div class="countdown">
@@ -863,6 +888,14 @@
     <div class="section-tag">Ngày thi</div>
     <h2 class="section-title">Agenda ngày thi — 27/06/2026</h2>
     <p class="section-desc">Lịch trình chi tiết cho ngày thi chính thức · Thứ 7, 08:30 – 17:10</p>
+
+    <div class="agenda-venue">
+      <span class="agenda-venue-icon">📍</span>
+      <div>
+        <div class="agenda-venue-label">Địa điểm tổ chức</div>
+        <div class="agenda-venue-address">東京都新宿区西新宿6-21-1 アイタウン・プラザ 206</div>
+      </div>
+    </div>
 
     <div style="overflow-x:auto; border-radius:14px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); border: 1px solid var(--gray-200); margin-top:8px; background:white;">
       <table class="agenda-table">
