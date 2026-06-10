@@ -105,11 +105,15 @@
     }
     .hero-date span { opacity: 0.8; font-weight: 400; margin-right: 6px; }
     .hero-venue {
+      display: inline-block;
       font-size: 15px; font-weight: 500;
       color: rgba(255,255,255,0.85);
       margin-top: -36px; margin-bottom: 40px;
       padding: 0 12px;
+      text-decoration: none;
+      transition: color .2s, transform .2s;
     }
+    .hero-venue:hover { color: white; transform: translateY(-1px); }
 
     /* countdown */
     .countdown {
@@ -383,6 +387,13 @@
       font-size: 16px; font-weight: 600;
       color: var(--gray-900); line-height: 1.4;
     }
+    .agenda-venue-map {
+      display: inline-block; margin-top: 8px;
+      font-size: 13px; font-weight: 600;
+      color: var(--red); text-decoration: none;
+      transition: color .2s;
+    }
+    .agenda-venue-map:hover { color: var(--red-dark); text-decoration: underline; }
     .agenda-table { width: 100%; border-collapse: collapse; font-size: 14px; background: white; }
     .agenda-table th {
       background: var(--red); color: white;
@@ -568,7 +579,7 @@
   <h1>Kaopiz Japan<br/><span>Hackathon</span> 2026</h1>
   <p class="hero-subtitle">Cùng nhau xây dựng giải pháp AI thực chiến — từ proposal đến release, biến quy trình phát triển phần mềm thành lợi thế cạnh tranh.</p>
   <div class="hero-date"><span>📅 Ngày thi chính thức:</span>27 tháng 06 năm 2026</div>
-  <div class="hero-venue">📍 東京都新宿区西新宿6-21-1 アイタウン・プラザ 206</div>
+  <a class="hero-venue" href="https://maps.app.goo.gl/UPvgmqMj441SaBe86" target="_blank" rel="noopener noreferrer">📍 東京都新宿区西新宿6-21-1 新宿アイタウン会議室</a>
 
   <!-- Countdown -->
   <div class="countdown">
@@ -893,7 +904,8 @@
       <span class="agenda-venue-icon">📍</span>
       <div>
         <div class="agenda-venue-label">Địa điểm tổ chức</div>
-        <div class="agenda-venue-address">東京都新宿区西新宿6-21-1 アイタウン・プラザ 206</div>
+        <div class="agenda-venue-address">東京都新宿区西新宿6-21-1 新宿アイタウン会議室</div>
+        <a class="agenda-venue-map" href="https://maps.app.goo.gl/UPvgmqMj441SaBe86" target="_blank" rel="noopener noreferrer">🗺 Xem trên Google Maps →</a>
       </div>
     </div>
 
